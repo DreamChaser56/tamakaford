@@ -8,8 +8,6 @@ if ($_POST) {
 	$email = trim($_POST['email']);
 	$phone = stripslashes($_POST['phone']);
 	$message = htmlspecialchars($_POST['message']);
-  $guests = stripslashes($_POST['guests']);
-  $date = stripslashes($_POST['date']);
 
 	$error = '';
 
@@ -32,12 +30,6 @@ if ($_POST) {
   }
   if ($message) {
   	$mess .= "Message: " . $message . "\r\n";
-  }
-  if ($guests) {
-    $mess .= "Guests:" . $guests . "\r\n";
-  }
-  if ($date) {
-    $mess .= "Date:" . $date . "\r\n";
   }
 
 	if (!$error) {
